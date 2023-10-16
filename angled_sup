@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1G8L9KYG0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y1G8L9KYG0');
+</script>
+    
+    <title>Please choose you complementary item</title>
+  </head>
+  <body bgcolor="#afafaf">
+    <div align="center">
+    <a href="IronSurg.html" > Back </a>
+    <h2> Order your complementary item here </h2>
+      
+      <style>
+  fieldset {
+    border: 2px solid red;
+    background-color: lightyellow;
+    padding: 5px;
+    width: 500px;
+      }
+       </style>
+      
+
+              
+      <p style="margin-top: 3em; width: 50%; font-size: 18px; color: #434975;">  Angled supports  - est. delivery <strong> in 6-8 days </strong></p> 
+    
+           <a href="angle.html"> To order click here  </a>
+        <p style=" width: 50%; font-size: 18px;"> </p>
+           <img width="501" src="angle.jpg" alt="Image">     
+                  
+                          
+        <p style="margin-top: 3em; width: 50%; font-size: 18px; color: #434975;">  Or choose a gift for a family member: 8-pack of watch bands for Apple (all sizes available)  - est. delivery <strong> in 4-6 days </strong></p>         
+         
+         <a href="luxif.html"> To order click here  </a>
+        <p style=" width: 50%; font-size: 18px;"> </p>
+           <img width="501" src="luxi.jpg" alt="Image">   
+
+
+        
+          
+    </div>  
+  </body>
+</html>
