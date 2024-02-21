@@ -5,7 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Star Rating</title>
 <style>
-  .stars {
+    body {
+    display: flex;
+    margin: 0;
+  }
+ .stars {
     font-size: 24px;
     cursor: pointer;
     position: relative; /* Position relative for absolute positioning */
@@ -13,31 +17,28 @@
   }
   .stars > span {
     position: relative;
-    display: inline-block;
   }
   .stars > span:before {
-    content: "\2605";
+    content: "&#9734";
     position: absolute;
-    color: gold;
-    left: 0; /* Start filling from the left */
-    width: 0; /* Start with no width */
-    overflow: hidden; /* Hide overflow */
+    color: transparent;
   }
   .stars > span:hover:before,
   .stars > span:hover ~ span:before {
-    width: 100%; /* Fill to 100% when hovered */
+    color: gold;
   }
 </style>
 </head>
   <body bgcolor="#F0FFFF">
 
 <div class="stars">
-  <span>&#9734;</span>
-  <span>&#9734;</span>
-  <span>&#9734;</span>
-  <span>&#9734;</span>
-  <span>&#9734;</span>
+ <span>\2605;</span>
+  <span>\2605;</span>
+ <span>\2605;</span>
+  <span>\2605;</span>
+  <span>\2605;</span>
 </div>
+
       
     
     <div align="center">
