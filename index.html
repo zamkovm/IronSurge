@@ -13,11 +13,13 @@
   }
   .stars > span {
     position: relative;
+    display: inline-block;
   }
   .stars > span:before {
     content: "\2605";
     position: absolute;
     color: transparent;
+    left: 0; /* Start filling from the left */
   }
   .stars > span:hover:before,
   .stars > span:hover ~ span:before {
