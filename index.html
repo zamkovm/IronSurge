@@ -40,12 +40,11 @@
 </p>
 
 <script>
-function redirect(event) {
   const stars = document.querySelectorAll('.stars span');
   let rating = 0;
 
   stars.forEach((star, index) => {
-    if (event.target === star) {
+    if (event.target === star || event.target.parentNode === star) {
       rating = index + 1;
     }
   });
@@ -58,7 +57,6 @@ function redirect(event) {
       star.innerHTML = '&#9734;'; // Empty star
     }
   });
-
  
 
   // Redirect to a new window only when all 5 stars are clicked
