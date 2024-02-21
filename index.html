@@ -24,12 +24,12 @@
   stars.forEach(star => {
     star.addEventListener('click', () => {
       const rating = star.value;
-        if (rating === 5) {
-    window.open(`new_window.html?rating=${rating}`, '_blank');
-  }
+       if (rating === '5') {
+        window.location.href = 'new_page.html'; // Redirect only if rating is 5
+       }
     });
   });
-</script>  
+</script>
     
     <div align="center">
       <p> </p>
