@@ -13,57 +13,49 @@
     margin: 0;
   }
   .stars {
-    font-size: 24px; /* Adjust size as needed */
+    font-size: 24px;
     cursor: pointer;
-    position: relative; /* Make sure the stars are positioned relative for absolute positioning */
-    display: inline-block; /* Display stars as inline-block */
+    text-align: justify;
   }
   .stars > span:hover:before,
   .stars > span:hover ~ span:before {
     content: "\2605";
-    position: absolute;
     color: gold;
-    left: 0;
   }
 </style>
 </head>
   <body bgcolor="#F0FFFF">
 
-<p>This is a paragraph with star ratings: 
-  <span class="stars" onclick="redirect(event)">
-    <span>&#9734;</span>
-    <span>&#9734;</span>
-    <span>&#9734;</span>
-    <span>&#9734;</span>
-    <span>&#9734;</span>
-  </span>
+<p class="stars" onmouseleave="clearRating()">
+  <span>&#9734;</span>
+  <span>&#9734;</span>
+  <span>&#9734;</span>
+  <span>&#9734;</span>
+  <span>&#9734;</span>
 </p>
 
 <script>
+function clearRating() {
   const stars = document.querySelectorAll('.stars span');
-  let rating = 0;
-
-  stars.forEach((star, index) => {
-    if (event.target === star || event.target.parentNode === star) {
-      rating = index + 1;
-    }
+  stars.forEach(star => {
+    star.innerHTML = '&#9734;'; // Empty star
   });
-
-  // Update stars' appearance based on the rating
-  stars.forEach((star, index) => {
-    if (index < rating) {
-      star.innerHTML = '&#9733;'; // Filled star
-    } else {
-      star.innerHTML = '&#9734;'; // Empty star
-    }
-  });
- 
-
-  // Redirect to a new window only when all 5 stars are clicked
-  if (rating === 5) {
-    window.open(`new_window.html?rating=${rating}`, '_blank');
-  }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const stars = document.querySelectorAll('.stars span');
+  stars.forEach((star, index) => {
+    star.addEventListener('mouseenter', () => {
+      stars.forEach((s, i) => {
+        if (i <= index) {
+          s.innerHTML = '&#9733;'; // Filled star
+        } else {
+          s.innerHTML = '&#9734;'; // Empty star
+        }
+      });
+    });
+  });
+});
 </script>
 
       
