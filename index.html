@@ -1,11 +1,56 @@
 <!doctype html>
 <html>
 <head>
-    
+ <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Star Rating</title>
+<style>
+  .stars {
+    display: inline-block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .stars > span:hover:before,
+  .stars > span:hover ~ span:before {
+    content: "\2605";
+    position: absolute;
+    color: gold;
+  }
+</style>   
 </head>
   <body bgcolor="#F0FFFF">
 
+<div class="stars" onclick="setRating(event)">
+  <span>&#9734;</span>
+  <span>&#9734;</span>
+  <span>&#9734;</span>
+  <span>&#9734;</span>
+  <span>&#9734;</span>
+</div>
+<p id="ratingPreview">0 Stars</p>
 
+<script>
+function setRating(event) {
+  const stars = document.querySelectorAll('.stars span');
+  const ratingPreview = document.getElementById('ratingPreview');
+  let rating = 0;
+  
+  stars.forEach((star, index) => {
+    if (event.target === star) {
+      rating = index + 1;
+    }
+    if (index < rating) {
+      star.innerHTML = '&#9733;'; // Filled star
+    } else {
+      star.innerHTML = '&#9734;'; // Empty star
+    }
+  });
+  
+  ratingPreview.textContent = `${rating} Star${rating !== 1 ? 's' : ''}`;
+}
+</script>
+
+      
     
     <div align="center">
       <h2> Nure LLC </h2>
