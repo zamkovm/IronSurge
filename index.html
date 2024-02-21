@@ -19,8 +19,16 @@
     <input type="radio" id="star1" name="rate" value="1" />
     <label for="star1" title="text">1 star</label>
   </div>
-      
-    
+    <script>
+  const stars = document.querySelectorAll('.rate input[type="radio"]');
+  stars.forEach(star => {
+    star.addEventListener('click', () => {
+      const rating = star.value;
+      window.location.href = `new_page.html?rating=${rating}`;
+    });
+  });
+</script>  
+    <p> </p>
     <div align="center">
       <h2> Nure LLC </h2>
           <p> <a href="IronSurg.html" > Back </a> </p>
