@@ -5,20 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Star Rating</title>
 <style>
-  body {
-    display: flex;
-    justify-content: center;
-       height: 100vh;
-    margin: 0;
-  }
   .stars {
     font-size: 24px;
     cursor: pointer;
-    text-align: justify;
+    position: relative; /* Position relative for absolute positioning */
+    display: inline-block; /* Display stars in a line */
+  }
+  .stars > span {
+    position: relative;
+  }
+  .stars > span:before {
+    content: "\2605";
+    position: absolute;
+    color: transparent;
   }
   .stars > span:hover:before,
   .stars > span:hover ~ span:before {
-    content: "\2605";
     color: gold;
   }
 </style>
