@@ -4,18 +4,30 @@
  <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Star Rating</title>
-<style>
+
+ <style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
   .stars {
-    display: inline-block;
-    font-size: 24px;
+    font-size: 72px; /* three times bigger */
     cursor: pointer;
   }
-  .stars > span:hover:before,
+  .stars > span:hover:before {
+    content: "\2605";
+    position: absolute;
+    color: gold;
+    left: 0;
+  }
   .stars > span:hover ~ span:before {
     content: "\2605";
     position: absolute;
     color: gold;
-   left: 0;
+    left: 0;
   }
 </style>   
 </head>
