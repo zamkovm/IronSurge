@@ -6,9 +6,7 @@
   <title>Star rating using pure CSS</title>
 </head>
   <body bgcolor="#F0FFFF">
-<div class="text">
-  <p>This is the first justified text line 1. This is the first justified text line 1. This is the first justified text line 1. This is the first justified text line 1. This is the first justified text line 1. This is the first justified text line 1.</p>
-</div>
+
 <div class="rate">
     <input type="radio" id="star5" name="rate" value="5" />
     <label for="star5" title="text">5 stars</label>
@@ -27,14 +25,13 @@
     star.addEventListener('click', () => {
       const rating = star.value;
        if (rating === '5') {
-        window.location.href = "https://www.AMAZON.com/ryp" target="_blank" onclick="window.open('https://www.AMAZON.com/ryp'); window.location.href='Joke.html'; return true;"// 'new_page.html'; Redirect only if rating is 5
-       }
+        window.location.href = 'page2.html'; // Redirect to page2 if rating is 5
+        window.open('page3.html', '_blank'); // Open page3 in a new window
+      }
     });
   });
 </script>
-    <div class="text">
-  <p>This is the justified text line 2. This is the justified text line 2. This is the justified text line 2. This is the justified text line 2. This is the justified text line 2. This is the justified text line 2.</p>
-</div>
+    
     <div align="center">
       <p> </p>
       <h2> Nure LLC </h2>
