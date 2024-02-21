@@ -24,12 +24,15 @@
   stars.forEach(star => {
     star.addEventListener('click', () => {
       const rating = star.value;
-      window.location.href = `new_page.html?rating=${rating}`;
+        if (rating === 5) {
+    window.open(`new_window.html?rating=${rating}`, '_blank');
+  }
     });
   });
 </script>  
-    <p> </p>
+    
     <div align="center">
+      <p> </p>
       <h2> Nure LLC </h2>
           <p> <a href="IronSurg.html" > Back </a> </p>
 <a href="https://www.ironsurge.net/store">
