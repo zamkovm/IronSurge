@@ -25,38 +25,13 @@
 </head>
   <body bgcolor="#F0FFFF">
 
-<p class="stars" onmouseleave="clearRating()">
+<div class="stars">
   <span>&#9734;</span>
   <span>&#9734;</span>
   <span>&#9734;</span>
   <span>&#9734;</span>
   <span>&#9734;</span>
-</p>
-
-<script>
-function clearRating() {
-  const stars = document.querySelectorAll('.stars span');
-  stars.forEach(star => {
-    star.innerHTML = '&#9734;'; // Empty star
-  });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  const stars = document.querySelectorAll('.stars span');
-  stars.forEach((star, index) => {
-    star.addEventListener('mouseenter', () => {
-      stars.forEach((s, i) => {
-        if (i <= index) {
-          s.innerHTML = '&#9733;'; // Filled star
-        } else {
-          s.innerHTML = '&#9734;'; // Empty star
-        }
-      });
-    });
-  });
-});
-</script>
-
+</div>
       
     
     <div align="center">
