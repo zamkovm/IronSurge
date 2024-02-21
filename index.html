@@ -18,12 +18,14 @@
   .stars > span:before {
     content: "\2605";
     position: absolute;
-    color: transparent;
-    right: 0; /* Start filling from the left */
+    color: gold;
+    left: 0; /* Start filling from the left */
+    width: 0; /* Start with no width */
+    overflow: hidden; /* Hide overflow */
   }
   .stars > span:hover:before,
   .stars > span:hover ~ span:before {
-    color: gold;
+    width: 100%; /* Fill to 100% when hovered */
   }
 </style>
 </head>
