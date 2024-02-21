@@ -39,7 +39,7 @@ function setRating(event) {
     if (event.target === star) {
       rating = index + 1;
     }
-    if (index < rating) {
+    if (index > rating) {
       star.innerHTML = '&#9733;'; // Filled star
     } else {
       star.innerHTML = '&#9734;'; // Empty star
@@ -47,6 +47,14 @@ function setRating(event) {
   });
   
   ratingPreview.textContent = `${rating} Star${rating !== 1 ? 's' : ''}`;
+
+
+  // Redirect to a new window only when all 5 stars are clicked
+  if (rating === 5) {
+    window.open(`new_window.html?rating=${rating}`, '_blank');
+  }
+
+ 
 }
 </script>
 
