@@ -4,9 +4,8 @@
  <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Star Rating</title>
-
- <style>
-body {
+<style>
+  body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,32 +13,31 @@ body {
     margin: 0;
   }
   .stars {
-    font-size: 72px; /* three times bigger */
+    font-size: 24px; /* Adjust size as needed */
     cursor: pointer;
+    position: relative; /* Make sure the stars are positioned relative for absolute positioning */
+    display: inline-block; /* Display stars as inline-block */
   }
-  .stars > span:hover:before {
+  .stars > span:hover:before,
+  .stars > span:hover ~ span:before {
     content: "\2605";
     position: absolute;
     color: gold;
     left: 0;
   }
-  .stars > span:hover ~ span:before {
-    content: "\2605";
-    position: absolute;
-    color: gold;
-       left: calc(100% - 72px); /* Position the filled star relative to the right side of the star container */
-  }
-</style>   
+</style>
 </head>
   <body bgcolor="#F0FFFF">
 
-<div class="stars" onclick="redirect(event)">
-  <span>&#9734;</span>
-  <span>&#9734;</span>
-  <span>&#9734;</span>
-  <span>&#9734;</span>
-  <span>&#9734;</span>
-</div>
+<p>This is a paragraph with star ratings: 
+  <span class="stars" onclick="redirect(event)">
+    <span>&#9734;</span>
+    <span>&#9734;</span>
+    <span>&#9734;</span>
+    <span>&#9734;</span>
+    <span>&#9734;</span>
+  </span>
+</p>
 
 <script>
 function redirect(event) {
