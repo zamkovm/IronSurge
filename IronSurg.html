@@ -101,25 +101,47 @@
          <p style="font-size: 30px;"> <strong> Order your complementary gift item here </strong>
          </a>  
 
+<div class="container">
+<div class="rate">
+    <input type="radio" id="star5" name="rate" value="5" />
+    <label for="star5" title="5">5 stars</label>
+    <input type="radio" id="star4" name="rate" value="4" />
+    <label for="star4" title="4">4 stars</label>
+    <input type="radio" id="star3" name="rate" value="3" />
+    <label for="star3" title="3">3 stars</label>
+    <input type="radio" id="star2" name="rate" value="2" />
+    <label for="star2" title="2">2 stars</label>
+    <input type="radio" id="star1" name="rate" value="1" />
+    <label for="star1" title="1">1 star</label>
+  </div>
+  </div>
+    <script>
+  const stars = document.querySelectorAll('.rate input[type="radio"]');
+  stars.forEach(star => {
+    star.addEventListener('click', () => {
+      const rating = star.value;
+       if (rating === '5') {
+        window.location.href = 'Review/FiveStar.html'; 
+                    }
+       if (rating === '4') {
+        window.location.href = 'Review/FourStar.html'; 
+                    }
+             if (rating === '3') {
+        window.location.href = 'Review/ThreeStar.html'; 
+                    }
+       if (rating === '2') {
+        window.location.href = 'Review/TwoStar.html'; 
+                    }
+             if (rating === '1') {
+        window.location.href = 'Review/OneStar.html'; 
+                    }
+    });
+  });
+</script>
 
-<!-- First line with in-line images -->
-      <div class="container">
-    <p></p>
-</div>
       
-<div class="container">
-    <a href="Joke.html"><img src="Un1.png" alt="Image 1"></a>
-    <a href="Joke.html"><img src="Un2.png" alt="Image 2"></a>
-    <a href="Joke.html"><img src="Un3.png" alt="Image 3"></a>
-    <a href="Joke.html"><img src="Un4.png" alt="Image 4"></a>
-    <a href="https://www.AMAZON.com/ryp" target="_blank" onclick="window.open('https://www.AMAZON.com/ryp'); window.location.href='Joke.html'; return true;">
-    <img src="Un5.png" alt="Clickable Image"></a>
-</div>
+  <p style="margin-top: 3em; width: 75%;font-size: 20px; color: #AA2A0E;"> <strong> Leave us a one-click Amazon rating, and we will tell you the Joke of the Month! <strong></p> 
 
-<!-- Second line with 500px wide text -->
-<div class="container">
-    <p><strong> Leave a one-click Amazon rating above, and we will tell you a very funny joke!</strong></p>
-</div>
       
       
   <p style="margin-top: 1em; width: 75%;font-size: 5px; color: #AA2A0E;"> </p>
